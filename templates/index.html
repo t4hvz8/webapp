@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block body %}
+
+<h1>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <h2 class="animate__heartBeat">
+        <div class = final_text>
+            <p>Розыгрыш завершен {{ date }}</p>
+
+        </div>
+    </h2>
+
+
+
+
+        <div id="typewriter" class="text-animation"></div>
+
+        <script>
+        function typeWriter(text, element, speed = 100) {
+            let i = 0;
+            const timer = setInterval(() => {
+            if(i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+            } else {
+                clearInterval(timer);
+                }
+            }, speed);
+            }
+
+
+
+// Использование
+
+            const textElement = document.getElementById('typewriter');
+
+            typeWriter('Приветствуем друзья! 🤗\nПришло время объявить победителей!\nПоздравляем!', textElement, 50);
+
+        </script>
+        </div>
+
+        {% for row in rows %}
+        <div id="content">
+            <div class="containerWIN">
+
+                <img class="winner_center" src="{{ url_for('static', filename=row[3]) }}">
+
+                <p>{{ row[2] }}</p>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+
+
+
+
+
+
+</h1>
+{% endblock %}

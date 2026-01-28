@@ -1,0 +1,194 @@
+body {
+/*    background-image: url('https://i.gifer.com/6ob.gif');   */
+    background-image: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWtzanI0MmRpY2VmazlmbmVnd2ZrYmFrZDB1NTVvZHV4dmowYWk2ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/26BRABnerqonwLHMc/giphy.gif');
+    background-size: cover
+    background-position: center;
+    background-color: #ffffff;
+}
+
+/* HEADER стиль картинки логотипа вверху */
+.header__img {
+    height: 10;
+    width: 10;
+}
+
+.center_title {
+    text-align: center;
+    font-size: 150%
+}
+
+.final_text {
+    display: flex; /* Делаем контейнер гибким */
+    align-items: center; /* Выравниваем элементы по центру вертикально */
+    justify-content: center; /* Выравниваем элементы по центру горизонтально */
+    gap: 5px; /* Расстояние между элементами */
+    text-align: center;
+    font-weight: 700;
+    font-size: 100%
+}
+
+
+
+
+
+/*
+.final_text img {
+    max-width: 50px; /* Максимальная ширина картинок *//*
+    height: auto; /* Сохраняем пропорции *//*
+}
+*/
+
+
+
+.final_text p {
+    font-size: 32px; /* Размер текста */
+    color: #333; /* Цвет текста */
+    margin-top: 100; /* Убираем отступы */
+}
+
+.left {
+    float: left; /* Выравнивание по левому краю */
+    margin: 0 1em 1em 0; /* Отступ справа и снизу */
+}
+
+.right {
+    float: right; /* Выравнивание по левому краю */
+    margin: 0 1em 1em 0; /* Отступ справа и снизу */
+}
+
+
+
+
+.winner_center {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.9);    /* Настройка тени*/
+  }
+
+
+
+  .winner_center img {
+    width:70%;
+    height:70%;
+    object-fit: cover;
+    }
+
+
+header {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    padding: 10px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: white;          /* фон шапки*/
+    -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.65);    /* Настройка тени*/
+    z-index: 1000;
+}
+
+        /* Стили для контейнера с картинками */
+.header-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+        /* Стили для картинок-ссылок */
+.header-images a {
+    display: inline-block;
+}
+
+
+
+/*
+.header-images img {
+    width: 50px; /* Размер картинок
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+*/
+
+
+
+.header-images img:hover {
+    transform: scale(1.1); /* Эффект увеличения при наведении */
+}
+
+
+.head_page {
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+.center {
+    text-align: center;
+    font-size: 80%
+    }
+
+
+.text-animation {
+    text-align: center;
+    font-family: monospace;
+    font-weight: 700;
+    white-space: pre-line;
+    overflow: hidden;
+    }
+
+.parent {
+    padding: 2px;
+    margin: 2px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    }
+
+.containerWIN {
+    display: flex; /* Используем Flexbox для выравнивания */
+    align-items: center; /* Выравниваем элементы по центру вертикально */
+    justify-content: center; /* Выравниваем элементы по центру горизонтально */
+    width: 80%; /* Ширина контейнера */
+    margin: 0 auto; /* Центрируем контейнер на странице */
+/*    border: 1px solid #ccc; /* Граница для наглядности */
+    padding: 20px; /* Отступы внутри контейнера */
+}
+
+.containerWIN  img {
+    margin-right: 20px; /* Отступ между картинкой и текстом */
+    width: 60px; /* Ширина картинки */
+    height: 60px; /* Высота картинки автоматически */
+
+}
+
+.containerWIN  p {
+    margin: 0; /* Убираем отступы у текста */
+    font-size: 18px; /* Размер текста */
+}
+
+.winners {
+    animation: fadeIn 1s forwards;
+}
+.winners:nth-child(2) {
+    animation-delay: 10s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
